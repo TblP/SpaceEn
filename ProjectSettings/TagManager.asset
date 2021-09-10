@@ -6,6 +6,11 @@ TagManager:
   tags:
   - SpaceShip
   - Barrier
+  - PickUp
+  - Crosshair
+  - pick
+  - Computer
+  - shop
   layers:
   - Default
   - TransparentFX

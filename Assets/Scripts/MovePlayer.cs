@@ -41,10 +41,11 @@ public class MovePlayer : MonoBehaviour
             {
                 player.height = 1.0f;
             }
-            else {  
+            else
+            {
                 player.height = 1.7f;
             }
-            
+
 
         }
         move_Direction.y -= gravity;
