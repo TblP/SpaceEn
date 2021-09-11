@@ -11,6 +11,11 @@ TagManager:
   - pick
   - Computer
   - shop
+  - StatusE
+  - StatusW
+  - StatusF
+  - StatusC
+  - StatusP
   layers:
   - Default
   - TransparentFX
