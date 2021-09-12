@@ -16,6 +16,10 @@ TagManager:
   - StatusF
   - StatusC
   - StatusP
+  - shop2
+  - Computer2
+  - kolvo1
+  - p1
   layers:
   - Default
   - TransparentFX

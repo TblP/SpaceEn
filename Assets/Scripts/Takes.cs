@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Takes : MonoBehaviour
 {
     public Image shop;
+    public Image shop2;
     public bool pickcheck = false;
     public GameObject crosshair;
     public GameObject distant;
@@ -30,6 +31,7 @@ public class Takes : MonoBehaviour
         }
         upanddown();
         openpc();
+        openpc2();
     }
     void pickup()
     {
@@ -78,4 +80,19 @@ public class Takes : MonoBehaviour
             }
         }
     }
+    void openpc2()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (Physics.Raycast(ray, out hit))
+            {
+                heading = hit.transform.position - gameObject.transform.position;
+                if (hit.transform.CompareTag("Computer2") && (heading.x < 3 && heading.z < 3 && heading.x > -3 && heading.z > -3))
+                {
+                    shop2.gameObject.SetActive(true);
+                }
+            }
+        }
+    }
+
 }
