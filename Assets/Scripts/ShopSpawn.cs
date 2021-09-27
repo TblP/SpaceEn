@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class ShopSpawn : MonoBehaviour
 {
-    public GameObject[] shopPrefabs;
-    public GameObject[] shopPrefabsonmap;
     public int i;
     public int b;
     public int c;
+
+    public GameObject[] shopPrefabs;
+    public GameObject[] shopPrefabsmap1;
+    public GameObject[] shopPrefabsmap2;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,55 +21,38 @@ public class ShopSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        shopPrefabsmap1 = GameObject.FindGameObjectsWithTag("Shesterenka");
+        shopPrefabsmap2 = GameObject.FindGameObjectsWithTag("Wire");
         spawnShop();
+        
     }
+
     void spawnShop()
     {
         switch (i)
         {
             case 1:
-                b = 0;
-                if (b < c) // êîëè÷åñòâî îáúåêòîâ íà êàðòå vs êîëè÷åñòâî êóïëåííûõ
+                b = shopPrefabsmap1.Length;
+                Debug.Log(b);
+                Debug.Log(c);
+                if (b < c) // ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¾Ð±ÑŠÐµÐºÑ‚Ð¾Ð² Ð½Ð° ÐºÐ°Ñ€Ñ‚Ðµ vs ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÐºÑƒÐ¿Ð»ÐµÐ½Ð½Ñ‹Ñ…
                 {
-                    Debug.Log("1"); // cïàâí îáúåêòà 1 
-                    
+                    Instantiate(shopPrefabs[0], gameObject.transform.position, shopPrefabs[0].transform.rotation);
                 }
-                
+
                 break;
             case 2:
-                b = 0;
+                b = shopPrefabsmap2.Length;
+                Debug.Log(b);
+                Debug.Log(c);
+                Debug.Log("2");
                 if (b < c)
                 {
-                    Debug.Log("2"); // cïàâí îáúåêòà 2
+                    
+                    Instantiate(shopPrefabs[1], gameObject.transform.position, shopPrefabs[1].transform.rotation);
+                }
+                break;
+        }
 
-                }
-                break;
-            case 3:
-                b = 0;
-                if (b < c)
-                {
-                    Debug.Log("3");
-                    
-                }
-                break;
-            case 4:
-                b = 0;
-                if (b < c)
-                {
-                    Debug.Log("4");
-                    
-                }
-                break;
-            case 5:
-                b = 0;
-                if (b < c)
-                {
-                    Debug.Log("5");
-                   
-                }
-                break;
-        }       
     }
-   
-
 }

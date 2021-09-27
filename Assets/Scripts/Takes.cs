@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -51,7 +52,7 @@ public class Takes : MonoBehaviour
                 if (Physics.Raycast(ray, out hit))
                 {
                     heading = hit.transform.position - gameObject.transform.position;
-                    if (hit.transform.CompareTag("PickUp") && (heading.x < 3 && heading.z < 3 && heading.x > -3 && heading.z > -3))
+                    if ((hit.transform.CompareTag("PickUp")||hit.transform.CompareTag("Shesterenka") ||hit.transform.CompareTag("Wire") ) && (heading.x < 3 && heading.z < 3 && heading.x > -3 && heading.z > -3))
                     {
                         pickcheck = true;
                     }

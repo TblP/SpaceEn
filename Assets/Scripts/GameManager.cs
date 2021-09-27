@@ -28,9 +28,7 @@ public class GameManager : MonoBehaviour
 
     public Text kolvo1;
     public Text kolvo2;
-    public Text kolvo3;
-    public Text kolvo4;
-    public Text kolvo5;
+
 
 
     // Start is called before the first frame update
@@ -545,87 +543,17 @@ public class GameManager : MonoBehaviour
         }
         kolvo2.text = i + "";
     }
-    public void plus2()
-    {
-        int i = Convert.ToInt32(kolvo3.text);
-        if (i <= 9)
-        {
-            i += 1;
-        }
-        kolvo3.text = i + "";
-    }
-    public void minus2()
-    {
-        int i = Convert.ToInt32(kolvo3.text);
-        i -= 1;
-        if (i < 0)
-        {
-            i = 0;
-        }
-        kolvo3.text = i + "";
-    }
-    public void plus3()
-    {
-        int i = Convert.ToInt32(kolvo4.text);
-        if (i <= 9)
-        {
-            i += 1;
-        }
-        kolvo4.text = i + "";
-    }
-    public void minus3()
-    {
-        int i = Convert.ToInt32(kolvo4.text);
-        i -= 1;
-        if (i < 0)
-        {
-            i = 0;
-        }
-        kolvo4.text = i + "";
-    }
-    public void plus4()
-    {
-        int i = Convert.ToInt32(kolvo5.text);
-        if (i <= 9)
-        {
-            i += 1;
-        }
-        kolvo5.text = i + "";
-    }
-    public void minus4()
-    {
-        int i = Convert.ToInt32(kolvo5.text);
-        i -= 1;
-        if (i < 0)
-        {
-            i = 0;
-        }
-        kolvo5.text = i + "";
-    }
+    
 
     public void click1()
     {
         ss.c = Convert.ToInt32(kolvo1.text);
         ss.i = 1;
+        
     }
     public void click2()
     {
         ss.c = Convert.ToInt32(kolvo1.text);
         ss.i = 2;
-    }
-    public void click3()
-    {
-        ss.c = Convert.ToInt32(kolvo1.text);
-        ss.i = 3;
-    }
-    public void click4()
-    {
-        ss.c = Convert.ToInt32(kolvo1.text);
-        ss.i = 4;
-    }
-    public void click5()
-    {
-        ss.c = Convert.ToInt32(kolvo1.text);
-        ss.i = 5;
     }
 }

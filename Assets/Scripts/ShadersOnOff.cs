@@ -9,11 +9,9 @@ public class ShadersOnOff : MonoBehaviour
 
     public Shader shaderOff;
 
-    private Renderer rend;
+    private Renderer _rend;
 
-    private GameObject player;
-
-    public Image crosshair;
+    public GameObject crosshair;
     
     public Ray ray;
     
@@ -22,27 +20,29 @@ public class ShadersOnOff : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rend = GetComponent<Renderer>();
+        _rend = GetComponent<Renderer>();
         shaderOff = Shader.Find("Custom/ShaderOff");
         shaderOn = Shader.Find("Outline/Green");
         
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        crosshair = GameObject.FindGameObjectWithTag("Crosshair");
         ray = Camera.main.ScreenPointToRay(crosshair.transform.position);
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.transform.CompareTag("PickUp") && gameObject.transform.position == hit.transform.position)
+            if ((hit.transform.CompareTag("Shesterenka") || hit.transform.CompareTag("Wire") ) 
+                && gameObject.transform.position == hit.transform.position)
             {
-                rend.material.shader = shaderOn;
+                _rend.material.shader = shaderOn;
             }
             else
             {
-                rend.material.shader = shaderOff;
+                _rend.material.shader = shaderOff;
             }
         }
-
     }
 }

@@ -20,11 +20,13 @@ TagManager:
   - Computer2
   - kolvo1
   - p1
+  - Wire
+  - Shesterenka
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PickUp
   - Water
   - UI
   - 
