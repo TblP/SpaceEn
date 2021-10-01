@@ -1467,7 +1467,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 202018994}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1256964780}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: repairbtn5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &202018994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3962,7 +3974,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 716031019}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1256964780}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: repairbtn4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &716031019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5278,11 +5302,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i: 0
-  b: 0
   c: 0
   shopPrefabs: []
-  shopPrefabsmap1: []
-  shopPrefabsmap2: []
 --- !u!4 &880265801
 Transform:
   m_ObjectHideFlags: 0
@@ -5756,7 +5777,7 @@ GameObject:
   - component: {fileID: 984955803}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5845,7 +5866,8 @@ MonoBehaviour:
   pickcheck: 0
   crosshair: {fileID: 0}
   distant: {fileID: 0}
-  heading: {x: 0, y: 0, z: 0}
+  distant2: {fileID: 0}
+  heading: 0
   i: 1
 --- !u!1001 &1004632807
 PrefabInstance:
@@ -7227,6 +7249,11 @@ MonoBehaviour:
   StatusR3: {fileID: 1743020099}
   StatusR4: {fileID: 2143962567}
   StatusR5: {fileID: 1909345381}
+  StatusA1: {fileID: 541345668}
+  StatusA2: {fileID: 1217278039}
+  StatusA3: {fileID: 426109136}
+  StatusA4: {fileID: 408649307}
+  StatusA5: {fileID: 956115673}
   kolvo1: {fileID: 550013072}
   kolvo2: {fileID: 1777657690}
 --- !u!4 &1256964781
@@ -7910,7 +7937,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1358597823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1256964780}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: repairbtn2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1358597823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8707,7 +8746,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1672575112}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1256964780}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: repairbtn1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1672575112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10228,7 +10279,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1892786710}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1256964780}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: repairbtn3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1892786710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10828,13 +10891,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i: 0
-  b: 0
   c: 0
   shopPrefabs:
   - {fileID: 5491812538450419491, guid: 2becd67de0e020843842a7417f1f562f, type: 3}
   - {fileID: 3601363712513841231, guid: c0802f8e9ac4c174faf680013d31c19a, type: 3}
-  shopPrefabsmap1: []
-  shopPrefabsmap2: []
 --- !u!4 &1972297832
 Transform:
   m_ObjectHideFlags: 0

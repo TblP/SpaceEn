@@ -28,7 +28,7 @@ public class ShadersOnOff : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         crosshair = GameObject.FindGameObjectWithTag("Crosshair");
         ray = Camera.main.ScreenPointToRay(crosshair.transform.position);

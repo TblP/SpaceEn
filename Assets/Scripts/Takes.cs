@@ -11,8 +11,9 @@ public class Takes : MonoBehaviour
     public bool pickcheck = false;
     public GameObject crosshair;
     public GameObject distant;
+    public GameObject distant2;
     public Ray ray;
-    public Vector3 heading;
+    public float heading;
     public RaycastHit hit;
     public int i;
     // Start is called before the first frame update
@@ -51,8 +52,9 @@ public class Takes : MonoBehaviour
                 
                 if (Physics.Raycast(ray, out hit))
                 {
-                    heading = hit.transform.position - gameObject.transform.position;
-                    if ((hit.transform.CompareTag("PickUp")||hit.transform.CompareTag("Shesterenka") ||hit.transform.CompareTag("Wire") ) && (heading.x < 3 && heading.z < 3 && heading.x > -3 && heading.z > -3))
+                    heading = Vector3.Distance(hit.transform.position ,gameObject.transform.position);
+                    if ((hit.transform.CompareTag("PickUp")||hit.transform.CompareTag("Shesterenka") || hit.transform.CompareTag("Wire") ) 
+                        && heading < 3 )
                     {
                         pickcheck = true;
                     }
@@ -73,8 +75,9 @@ public class Takes : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit))
             {
-                heading = hit.transform.position - gameObject.transform.position;
-                if (hit.transform.CompareTag("Computer") && (heading.x < 3 && heading.z < 3 && heading.x > -3 && heading.z > -3))
+                heading = Vector3.Distance(hit.transform.position ,gameObject.transform.position);
+                Debug.Log(heading);
+                if (hit.transform.CompareTag("Computer") && heading < 3)
                 {
                     shop.gameObject.SetActive(true);
                 }
@@ -87,8 +90,8 @@ public class Takes : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit))
             {
-                heading = hit.transform.position - gameObject.transform.position;
-                if (hit.transform.CompareTag("Computer2") && (heading.x < 3 && heading.z < 3 && heading.x > -3 && heading.z > -3))
+                heading = Vector3.Distance(hit.transform.position ,gameObject.transform.position);
+                if (hit.transform.CompareTag("Computer2") && heading < 3)
                 {
                     shop2.gameObject.SetActive(true);
                 }
